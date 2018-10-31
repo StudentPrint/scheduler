@@ -30,7 +30,7 @@ class Time :
 	def equals(self, time) :
 		return self.hours == time.hours and self.minutes == time.minutes
 
-	def toString(self) :
+	def __str__(self) :
 		if(self.hours > 12) :
 			return str(self.hours-12) + ':' + str(self.minutes).zfill(2) + ('AM' if self.hours == 24 else 'PM')
 		else :
